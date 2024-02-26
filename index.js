@@ -9,7 +9,7 @@ const cors = require('cors');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors({
-    origin: ['http://www.kudutask.com', 'http://localhost:4200'],
+    origin: ['http://www.kudutask.com', 'https://kudutask.async.ng', 'http://localhost:4200'],
     credentials: true
 }));
 
