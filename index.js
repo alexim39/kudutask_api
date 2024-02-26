@@ -28,6 +28,7 @@ const logger = winston.createLogger({
 })
 
 // Routes MW
+app.get('/', (req, res) => res.send('Node server is up and running'));
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/user', require('./routes/user'));
 app.use('/api/task', require('./routes/task/task'));
