@@ -5,7 +5,7 @@ module.exports = class Task {
     // Create task
     static async create(req, res) {
         try{
-            console.log('r task ===',req.body);
+            console.log('body task ===',req.body);
             // validate inputs
             const error = await TaskValidator(req.body);
             if (error.message) return res.status(400).send(error.message);
