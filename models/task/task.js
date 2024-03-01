@@ -37,8 +37,8 @@ const TaskValidator = (task) => {
     let schema = yup.object().shape({
         title: yup.string().required().min(3, 'Task title should be a little descriptive').max(100, 'Title too long'),
         description: yup.string().min(3, 'Task description should be a little meaningful').max(400, 'Too much description'),
-        startDate: yup.date().required('Task start date is required'),
-        endDate: yup.date().required('Task end date is required'),
+        start: yup.date().required('Task start date is required'),
+        end: yup.date().required('Task end date is required'),
         priority: yup.string().min(3, 'Invalid priority value').max(7, 'Invalid priority value'),
         creator: yup.string().required('Task creator is required')
     })
