@@ -7,7 +7,6 @@ module.exports = class SignUp {
     // User singup
     static async register(req, res) {
         try {
-            console.log('record',req.body)
            // validate inputs
            const error = await SignUpValidator(req.body);
            if (error.message) return res.status(400).send(error.message);
