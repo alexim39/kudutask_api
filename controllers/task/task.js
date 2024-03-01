@@ -13,8 +13,8 @@ module.exports = class Task {
             const task = await new TaskModel({
                 title: req.body.title,
                 description: req.body.description,
-                startDate: req.body.startDate,
-                endDate: req.body.endDate,
+                startDate: req.body.start,
+                endDate: req.body.end,
                 priority: req.body.priority,
                 creator: req.body.creator
             }).save();
