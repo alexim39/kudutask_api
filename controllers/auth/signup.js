@@ -32,8 +32,8 @@ module.exports = class SignUp {
 
             if (user) {
                 // send activation email
-                const email = new EmailClass();
-                email.sendAccountActivationLink(user);
+                //const email = new EmailClass();
+                //email.sendAccountActivationLink(user);
                 return res.status(200).json({ msg: `Account created`, code: 200, obj: user });
             } else {
                 return res.status(404).json({ msg: `Account creation failed`, code: 404 });
